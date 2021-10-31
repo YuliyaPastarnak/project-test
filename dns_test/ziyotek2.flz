@@ -1,0 +1,24 @@
+$TTL 1D
+@       IN SOA  prdx-nsmaster12.ziyotek2.local.  root.prdx-nsmaster12.ziyotek2.local. (
+                                        0     ; serial
+                                        3600    ; refresh
+                                        1800    ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+
+
+;Name Server Information
+        IN      NS      prdx-nsmaster12.ziyotek2.local.
+        IN      NS      prdx-nsworker12.ziyotek2.local.
+        IN      NS      prdx-nsworker22.ziyotek2.local.
+
+
+;Name server hostname to IP resolve
+prdx-nsmaster12          IN              A       192.168.50.170
+prdx-nsworker12          IN              A       192.168.50.171
+prdx-nsworker22          IN              A       192.168.50.172
+
+;CNAME record
+nsmaster12               IN              CNAME   prdx-nsmaster12.ziyotek2.local.
+nsworker12               IN              CNAME   prdx-nsworker12.ziyotek2.local.
+nsworker22               IN              CNAME   prdx-nsworker22.ziyotek2.local.
